@@ -3,14 +3,14 @@
 :root {
     --primary-color: #4a90e2;
     --secondary-color: #f5f5f5;
-    --title: #d3d1cd;
-    --contrast: #f80000;
-    --text-base: #1f1fff1f;
-    --cta: #ff6f61;
-    --background: #3f3e3e;
-    --text-color: #b19292;
+    --title: #ebe0cc;
+    --contrast: #ff0000;
+    --text-base: #f1c500;
+    --cta: #ff9a91;
+    --background: #000000;
+    --text-color: #5f1f1f;
     --gradient1: linear-gradient(135deg, #4a90e2, #f5f5f5);
-    --gradient2: linear-gradient(135deg, #c74a4a, #8995a3);
+    --gradient2: linear-gradient(135deg, #c20a0a, #8995a3);
     --font-base: 'Roboto', sans-serif;
     --font-tiltle: 'Playfair', serif;
 }
@@ -79,6 +79,7 @@ img {
 .anuncio-conteudo p {
     display: inline-block;
     animation: textoCorrido 10s linear infinite;
+    color:var(--secondary-color)
 }
 
 @keyframes textoCorrido {
@@ -109,4 +110,51 @@ img {
 .topo nav {
     display: flex;
     gap: 20px;
+}
+
+.topo nav a {
+    text-transform:uppercase;
+    font-weight: bold;
+    color: var(--text-base);
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.topo nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+}
+
+.topo nav a:hover::after {
+    width: 100%;
+}
+
+.topo nav a:hover {
+    color: var(--primary-color);
+}
+
+/*Responsividade*/
+@media (max-width: 768px) {
+    .topo {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px;
+    }
+
+    .topo picture {
+        max-width: 30px;
+    }
+
+    .topo nav a {
+        font-size: 12px;
+    }
 }

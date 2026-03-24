@@ -7,7 +7,7 @@ export default function Topo() {
                 <div className='anuncio-conteudo'>
                 <p>Tudo em 10x sem juros!</p>
             </div>
-</div>
+            
             <div className='topo'>
                 <picture>
                     <a href="#">
@@ -16,11 +16,12 @@ export default function Topo() {
                 </picture>
 
                 <nav>
-                    <a href="Home"></a>
-                    <a href="Produtos"></a>
-                    <a href="Lançamentos"></a>
-                    <a href="Contato"></a>
+                    <a href="Home">Home</a>
+                    <a href="Produtos">Produtos</a>
+                    <a href="Lançamentos">Lançamentos</a>
+                    <a href="Contato">Contato</a>
                 </nav>
+            </div>
             </div>
         </header>
     )
